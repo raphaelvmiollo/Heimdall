@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<br>
+{{ msg }}
+{% for site in sites %}
+<div class="panel panel-default">
+	<div class="panel-body">
+		<a href="javascript:void(0)"  onclick="show(id)"> {{ site.nome}} </a>
+		<div id='{{site.id}}' style="display: none">
+			<h3>Outro conteudo</h3>
+		</div>
+	</div>
+</div>
+
+{% endfor %}
+
+{% endblock %}
+
+
+<script type="text/javascript">
+
+
+function show(id) {
+	alert(id);
+	$('.newboxes').each(function(index) {
+		if ($(this).attr("id") == thechosenone) {
+			$(this).show(200);
+		}
+		else {
+			$(this).hide(600);
+		}
+	});
+}
+
+</script>
