@@ -1,0 +1,7 @@
+.operacoes{
+	float: left;
+}
+
+.panel-body:hover{
+	 box-shadow: 0 0 3px 0px #000;
+}
